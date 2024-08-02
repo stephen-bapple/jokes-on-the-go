@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "github.com/stephen-bapple/jokes-on-the-go/joke-service";
+
+package jokeserver;
+
+service JokeService {
+    rpc GetAnyRandomJoke(GetAnyRandomJokeRequest) returns (GetAnyRandomJokeResponse) {}
+}
+
+message GetAnyRandomJokeRequest {}
+
+message GetAnyRandomJokeResponse {
+    Joke joke = 1;
+}
+
+message Joke {
+    string setup = 1;
+    string punchline = 2;
+}

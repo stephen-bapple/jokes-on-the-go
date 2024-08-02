@@ -1,6 +1,12 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
+# Remove extensionless binaries.
+# Taken from https://stackoverflow.com/questions/5711120/gitignore-binary-files-that-have-no-extension
+# Remove extensionless binaries 1: Ignore all
+*
+# Remove extensionless binaries 2: Unignore all with extensions
+!*.*
+# Remove extensionless binaries 3: Unignore all dirs
+!*/
+
 # Binaries for programs and plugins
 *.exe
 *.exe~

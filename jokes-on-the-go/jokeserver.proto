@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/stephen-bapple/jokes-on-the-go/jokes-on-the-go";
+
+package jokeserver;
+
+service Jokes {
+    // Ensures the service is up. Just for testing
+    rpc Ping(PingRequest) returns (PingResponse) {}
+}
+
+message PingRequest {
+    int32 pongs = 1;
+}
+
+message PingResponse {
+    string message = 1;
+}

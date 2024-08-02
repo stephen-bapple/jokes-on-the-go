@@ -17,8 +17,7 @@ mkdir -p $FOLDER/$GO_DIR
 mkdir -p $FOLDER/$KT_DIR
 
 # Generate Go stubs
-protoc --go_out=. --go_opt=paths=import \
-  --go-grpc_out=. --go-grpc_opt=paths=import \
+protoc --go_out=. --go-grpc_out=. \
   --go_opt=module=$PREFIX --go-grpc_opt=module=$PREFIX \
   $FOLDER/jokeserver.proto
 
@@ -30,7 +29,7 @@ popd
 
 # Generate Kotlin stubs
 protoc --plugin=protoc-gen-grpckt=protoc-gen-grpc-kotlin.sh \
-  --grpckt_out=$FOLDER/$KT_DIR \
+  --kotlin_out=$FOLDER/$KT_DIR --grpckt_out=$FOLDER/$KT_DIR \
   $FOLDER/jokeserver.proto
 
 echo "Finished generating gRPC stubs."

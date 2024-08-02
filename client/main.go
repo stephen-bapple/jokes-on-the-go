@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	pb "github.com/stephen-bapple/jokes-on-the-go/joke-service"
+	pb "github.com/stephen-bapple/jokes-on-the-go/protobuf/go/joke-service"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

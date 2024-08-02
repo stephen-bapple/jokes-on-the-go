@@ -17,8 +17,8 @@ mkdir -p $FOLDER/$GO_DIR
 mkdir -p $FOLDER/$KT_DIR
 
 # Generate Go stubs
-protoc --go_out=$FOLDER/$GO_DIR --go_opt=paths=import \
-  --go-grpc_out=$FOLDER/$GO_DIR --go-grpc_opt=paths=import \
+protoc --go_out=. --go_opt=paths=import \
+  --go-grpc_out=. --go-grpc_opt=paths=import \
   --go_opt=module=$PREFIX --go-grpc_opt=module=$PREFIX \
   $FOLDER/jokeserver.proto
 

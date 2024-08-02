@@ -3,7 +3,7 @@ syntax = "proto3";
 option go_package = "github.com/stephen-bapple/jokes-on-the-go/protobuf/go/joke-service";
 
 option java_multiple_files = true;
-option java_package = "io.github.stephen_bapple.jokesonthegoservice";
+option java_package = "io.github.stephenbapple.jokesonthegoservice";
 option java_outer_classname = "JokeServerProto";
 
 package jokeserver;

@@ -7,6 +7,9 @@
 # Remove extensionless binaries 3: Unignore all dirs
 !*/
 
+# Gradlew is an exception to the norm and is intended to be committed to source control
+!gradlew
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -34,5 +37,6 @@ go.work.sum
 
 # Certs are stored in here for now, ignore em
 **/certs/*
-# But keep this script to generate them
+# But keep this script to generate them and their folders
 !server/certs/create.sh
+!.gitkeep

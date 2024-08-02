@@ -3,9 +3,9 @@ PREFIX="github.com/stephen-bapple/jokes-on-the-go"
 FOLDER="protobuf"
 SERVICE="joke-service"
 GO_DIR="go"
-KT_ROOT="kotlin"
-KT_DIR="$KT_ROOT/src/main/kotlin"
-JAVA_DIR="$KT_ROOT/src/main/java"
+KT_ROOT="kotlin/src"
+KT_DIR="$KT_ROOT/main/kotlin"
+JAVA_DIR="$KT_ROOT/main/java"
 
 # TODO: this seems fragile as it's specified in the .proto file as well.
 GO_PACKAGE="$PREFIX/$FOLDER/$GO_DIR/$SERVICE"

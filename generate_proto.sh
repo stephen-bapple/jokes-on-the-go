@@ -4,6 +4,8 @@ FOLDER="protobuf"
 SERVICE="joke-service"
 GO_DIR="go"
 KT_DIR="kotlin"
+JAVA_DIR="java"
+
 # TODO: this seems fragile as it's specified in the .proto file as well.
 GO_PACKAGE="$PREFIX/$FOLDER/$GO_DIR/$SERVICE"
 
@@ -13,8 +15,10 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 # Clean directories
 rm -rf $FOLDER/$GO_DIR/*
 rm -rf $FOLDER/$KT_DIR/*
+rm -rf $FOLDER/$JAVA_DIR/*
 mkdir -p $FOLDER/$GO_DIR
 mkdir -p $FOLDER/$KT_DIR
+mkdir -p $FOLDER/$JAVA_DIR
 
 # Generate Go stubs
 protoc --go_out=. --go-grpc_out=. \
@@ -30,6 +34,11 @@ popd
 # Generate Kotlin stubs
 protoc --plugin=protoc-gen-grpckt=protoc-gen-grpc-kotlin.sh \
   --kotlin_out=$FOLDER/$KT_DIR --grpckt_out=$FOLDER/$KT_DIR \
+  $FOLDER/jokeserver.proto
+
+# Generate Java GRPC stubs - Kotlin needs these
+protoc --plugin=protoc-gen-grpc-java \
+  --java_out=$FOLDER/$JAVA_DIR --grpc-java_out=$FOLDER/$JAVA_DIR \
   $FOLDER/jokeserver.proto
 
 echo "Finished generating gRPC stubs."

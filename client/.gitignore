@@ -1,0 +1,9 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+.kotlin/
+
+# Gradlew is an exception to the norm and is intended to be committed to source control
+!gradlew

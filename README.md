@@ -20,7 +20,7 @@ However, I found it easier to just download an ELF from https://repo1.maven.org/
 
 ## Scripts
 ### generate_proto.sh
-Run `./generate_proto.sh` to add the go protoc plugins to the path and make them runnable. 
+Run `./generate_proto.sh` to generate both the Go protobuf stubs and the Kotlin protobuf stubs.
 
 ### protoc-gen-grpc-kotlin.sh
 The script `./protoc-gen-grpc-kotlin.sh` is used as a facade to the .jar file plugin for kotlin code stub generation. The protoc compiler expects a direct executable, requiring wrapping the jar.

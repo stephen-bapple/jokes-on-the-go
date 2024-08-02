@@ -23,7 +23,13 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+.idea/
 
 # Go workspace file
 go.work
 go.work.sum
+
+# Certs are stored in here for now, ignore em
+**/certs/*
+# But keep this script to generate them
+!server/certs/create.sh

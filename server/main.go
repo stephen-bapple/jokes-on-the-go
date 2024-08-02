@@ -5,8 +5,10 @@ import (
 	"fmt"
 	"log"
 	"net"
+
 	pb "github.com/stephen-bapple/jokes-on-the-go/protobuf/go/joke-service"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials"
 )
 
 const (
@@ -31,14 +33,19 @@ func (s *server) GetAnyRandomJoke(ctx context.Context, in *pb.GetAnyRandomJokeRe
 }
 
 func main() {
+	tlsCredentials, err := credentials.NewServerTLSFromFile("certs/server-cert.pem", "certs/server-key.pem")
+	if err != nil {
+		log.Fatalf("failed to load key pair: %s", err)
+	}
+	creds := grpc.Creds(tlsCredentials)
+	log.Printf("Printing %v", creds)
+	s := grpc.NewServer(creds)
+	pb.RegisterJokeServiceServer(s, &server{})
+	
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", port))
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
-
-	s := grpc.NewServer()
-	pb.RegisterJokeServiceServer(s, &server{})
-
 	log.Printf("server listening at %v", lis.Addr())
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)

@@ -27,7 +27,7 @@ func main() {
 
 	r, err := client.GetAnyRandomJoke(ctx, &pb.GetAnyRandomJokeRequest{})
 	if err != nil {
-		log.Fatalf("Could not ping!")
+		log.Fatalf("Could not ping due to %v", err)
 	}
 	log.Println(r.GetJoke().GetSetup())
 	log.Println(r.GetJoke().GetPunchline())

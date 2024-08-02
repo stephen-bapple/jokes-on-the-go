@@ -1,7 +1,5 @@
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
-github.com/stephen-bapple/jokes-on-the-go v0.0.0-20240727182245-87e683967802 h1:fN5BFc6YgNg0HLE20pq6Drwl/ST8/MA58divAN1IWlM=
-github.com/stephen-bapple/jokes-on-the-go v0.0.0-20240727182245-87e683967802/go.mod h1:s6Mx514lmOyF/uT2nMIWW9HzholZP2Y1VCJqmeTRPZQ=
 github.com/stephen-bapple/jokes-on-the-go/protobuf/go/joke-service v0.0.0-20240731205844-921c7e7950c2 h1:P0+CkefgwQIl/gYuXe2sFI2FAivp4HGLaDrpaAcxw0s=
 github.com/stephen-bapple/jokes-on-the-go/protobuf/go/joke-service v0.0.0-20240731205844-921c7e7950c2/go.mod h1:fa7GJQO6lrKJTyxXUYSOvRof/YGAkLqUWIbTNXlXU7o=
 golang.org/x/net v0.25.0 h1:d/OCCoBEUq33pjydKrGQhw7IlUPI2Oylr+8qLx49kac=

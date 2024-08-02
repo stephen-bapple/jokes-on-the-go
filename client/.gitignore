@@ -7,3 +7,5 @@ build
 
 # Gradlew is an exception to the norm and is intended to be committed to source control
 !gradlew
+
+*.env

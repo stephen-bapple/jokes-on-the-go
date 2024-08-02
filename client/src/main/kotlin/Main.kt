@@ -1,12 +1,14 @@
+import io.github.cdimascio.dotenv.dotenv
 import io.grpc.ManagedChannel
 import io.grpc.netty.shaded.io.grpc.netty.GrpcSslContexts
 import io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder
+import io.grpc.Metadata
+import io.grpc.stub.MetadataUtils
 import sb.jokesonthego.jokeservice.JokeServiceGrpcKt.JokeServiceCoroutineStub
 import sb.jokesonthego.jokeservice.getAnyRandomJokeRequest
 import sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse
 import java.io.Closeable
 import java.util.concurrent.TimeUnit
-
 
 fun createTLSChannel(): ManagedChannel {
     val path = "/certs/ca-cert.pem"
@@ -17,10 +19,18 @@ fun createTLSChannel(): ManagedChannel {
     return NettyChannelBuilder.forTarget("localhost:50051").sslContext(sslContext).build()
 }
 
-class JokeServiceClient(private val channel: ManagedChannel) : Closeable {
-    private val stub: JokeServiceCoroutineStub = JokeServiceCoroutineStub(channel)
+class JokeServiceClient(private val channel: ManagedChannel, private val apiKey: String) : Closeable {
+    private val stub: JokeServiceCoroutineStub = run {
+        val header = Metadata()
+        val authorizationKey = Metadata.Key.of("Authorization", Metadata.ASCII_STRING_MARSHALLER)
+        header.put(authorizationKey, "Bearer $apiKey")
 
-    suspend fun getRandomJoke() : GetAnyRandomJokeResponse {
+        JokeServiceCoroutineStub(channel).withInterceptors(
+            MetadataUtils.newAttachHeadersInterceptor(header)
+        )
+    }
+
+    suspend fun getRandomJoke(): GetAnyRandomJokeResponse {
         val request = getAnyRandomJokeRequest {}
         val response = stub.getAnyRandomJoke(request)
         return response
@@ -32,7 +42,7 @@ class JokeServiceClient(private val channel: ManagedChannel) : Closeable {
 }
 
 suspend fun main() {
-    val client = JokeServiceClient(createTLSChannel())
+    val client = JokeServiceClient(createTLSChannel(), dotenv()["API_KEY"])
     val resp = client.getRandomJoke()
     println(resp)
 }

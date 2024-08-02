@@ -29,10 +29,11 @@ dependencies {
     implementation("com.google.protobuf:protobuf-kotlin:4.27.3")
     implementation("com.google.protobuf:protobuf-java:4.27.3")
 
-    // Async suff
+    // Async stuff
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
-
-    // Kotlin
+    // JWT stuff
+    implementation("io.github.cdimascio:dotenv-kotlin:6.3.1")
+    // Kotlin test
     testImplementation(kotlin("test"))
 
 }

@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v5.27.1
-// source: joke-service/jokeserver.proto
+// source: protobuf/jokeserver.proto
 
 package joke_service
 
@@ -137,5 +137,5 @@ var JokeService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "joke-service/jokeserver.proto",
+	Metadata: "protobuf/jokeserver.proto",
 }

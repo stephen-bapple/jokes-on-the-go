@@ -6,10 +6,17 @@ import (
 
 	jwt "github.com/golang-jwt/jwt/v5"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"
+	"google.golang.org/grpc/status"
 )
 
-func validateJwtToken(authorization []string) bool {
+var (
+	errMissingMetadata = status.Errorf(codes.InvalidArgument, "missing metadata")
+	errInvalidToken    = status.Errorf(codes.Unauthenticated, "invalid token")
+)
+
+func validateJwtToken(authorization []string, secret string) bool {
 	if len(authorization) < 1 {
 		return false
 	}
@@ -19,21 +26,23 @@ func validateJwtToken(authorization []string) bool {
 		jwt.WithValidMethods([]string{jwt.SigningMethodHS256.Alg()}),
 	}
 	_, err := jwt.Parse(rawToken, func(*jwt.Token) (interface{}, error) {
-		return []byte(jwtSecret), nil
+		return []byte(secret), nil
 	}, parseOpts...)
 
 	return err == nil
 }
-
-func validateRequestToken(ctx context.Context, req any, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (any, error) {
-	meta, ok := metadata.FromIncomingContext(ctx)
-	if !ok {
-		return nil, errMissingMetadata
+func makeValidator(secret string) (func(ctx context.Context, req any, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (any, error)) {
+	return func (ctx context.Context, req any, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (any, error) {
+		meta, ok := metadata.FromIncomingContext(ctx)
+		if !ok {
+			return nil, errMissingMetadata
+		}
+	
+		if !validateJwtToken(meta["authorization"], secret) {
+			return nil, errInvalidToken
+		}
+	
+		return handler(ctx, req)
 	}
-
-	if !validateJwtToken(meta["authorization"]) {
-		return nil, errInvalidToken
-	}
-
-	return handler(ctx, req)
+	
 }

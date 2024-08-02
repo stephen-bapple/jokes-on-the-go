@@ -8,19 +8,12 @@ import (
 	"os"
 	pb "github.com/stephen-bapple/jokes-on-the-go/protobuf/go/joke-service"
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/status"
 )
 
 const (
 	// Realistically, this won't change.
 	port = 50051
-)
-var (
-	errMissingMetadata = status.Errorf(codes.InvalidArgument, "missing metadata")
-	errInvalidToken    = status.Errorf(codes.Unauthenticated, "invalid token")
-	jwtSecret string
 )
 
 type server struct {
@@ -40,7 +33,7 @@ func (s *server) GetAnyRandomJoke(ctx context.Context, in *pb.GetAnyRandomJokeRe
 }
 
 func main() {
-	jwtSecret = os.Getenv("JWT_SECRET")
+	jwtSecret := os.Getenv("JWT_SECRET")
 	if jwtSecret == "" {
 		log.Fatalf("Cannot start server with JWT_SECRET present in environment")
 	}
@@ -50,7 +43,7 @@ func main() {
 		log.Fatalf("failed to load key pair: %s", err)
 	}
 	opts := []grpc.ServerOption{
-		grpc.UnaryInterceptor(validateRequestToken),
+		grpc.UnaryInterceptor(makeValidator(jwtSecret)),
 		grpc.Creds(tlsCredentials),
 	}
 

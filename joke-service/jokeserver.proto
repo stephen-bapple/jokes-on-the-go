@@ -2,10 +2,15 @@ syntax = "proto3";
 
 option go_package = "github.com/stephen-bapple/jokes-on-the-go/joke-service";
 
+option java_multiple_files = true;
+option java_package = "sb.jokesonthego.jokeservice";
+option java_outer_classname = "JokeServerProto";
+
 package jokeserver;
 
 service JokeService {
     rpc GetAnyRandomJoke(GetAnyRandomJokeRequest) returns (GetAnyRandomJokeResponse) {}
+    rpc GetAnyRandomJoke2Test(GetAnyRandomJokeRequest) returns (GetAnyRandomJokeResponse) {}
 }
 
 message GetAnyRandomJokeRequest {}

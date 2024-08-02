@@ -16,8 +16,8 @@ repositories {
 
 dependencies {
     // https://github.com/grpc/grpc-java/blob/master/README.md
-    // Java gRPC runtime. ManagedChannelBuilder uses it as a concrete impl.
-    runtimeOnly("io.grpc:grpc-netty-shaded:1.65.0")
+    // Suggested as runtime only, but I struggled to get ManagedChannelBuilder to use SSL correctly, netty just works.
+    implementation("io.grpc:grpc-netty-shaded:1.65.0")
     // Java 9+ needs this
     compileOnly("org.apache.tomcat:annotations-api:6.0.53")
 

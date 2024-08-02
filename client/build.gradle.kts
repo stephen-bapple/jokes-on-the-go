@@ -57,10 +57,10 @@ java {
 sourceSets {
     main {
         kotlin {
-            srcDir("../protobuf/kotlin")
+            srcDir("../protobuf/kotlin/src/main/kotlin")
         }
         java {
-            srcDir("../protobuf/java")
+            srcDir("../protobuf/kotlin/src/main/java")
         }
     }
 }

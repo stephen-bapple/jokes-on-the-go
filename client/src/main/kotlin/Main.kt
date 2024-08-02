@@ -1,12 +1,12 @@
 import io.github.cdimascio.dotenv.dotenv
+import io.github.stephen_bapple.jokesonthegoservice.JokeServiceGrpcKt.JokeServiceCoroutineStub
+import io.github.stephen_bapple.jokesonthegoservice.getAnyRandomJokeRequest
+import io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse
 import io.grpc.ManagedChannel
 import io.grpc.netty.shaded.io.grpc.netty.GrpcSslContexts
 import io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder
 import io.grpc.Metadata
 import io.grpc.stub.MetadataUtils
-import sb.jokesonthego.jokeservice.JokeServiceGrpcKt.JokeServiceCoroutineStub
-import sb.jokesonthego.jokeservice.getAnyRandomJokeRequest
-import sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse
 import java.io.Closeable
 import java.util.concurrent.TimeUnit
 

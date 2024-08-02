@@ -2,7 +2,7 @@ DEFAULT_SUBJS="/C=US/ST=Colorado/L=Denver/O=stephen-bapple.github.io"
 EMAIL_SUBJ="emailAddress=stephen.bapple@gmail.com"
 
 CA_SUBJ="$DEFAULT_SUBJS/CN=CA/$EMAIL_SUBJ"
-SERVER_SUBJ="$DEFAULT_SUBJS/CN=Jokes on the Go Server/$EMAIL_SUBJ"
+SERVER_SUBJ="$DEFAULT_SUBJS/CN=localhost/$EMAIL_SUBJ"
 
 # Cleanup
 rm *.pem
@@ -20,4 +20,5 @@ openssl x509 -req -in server-req.pem -days 30 -CA ca-cert.pem -CAkey ca-key.pem 
 openssl verify -CAfile ca-cert.pem server-cert.pem
 
 # Copy CA to client's directory
+mkdir -p ../../client/src/main/resources/certs
 cp ca-cert.pem ../../client/src/main/resources/certs

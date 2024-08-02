@@ -38,7 +38,7 @@ func main() {
 		log.Fatalf("failed to load key pair: %s", err)
 	}
 	creds := grpc.Creds(tlsCredentials)
-	log.Printf("Printing %v", creds)
+
 	s := grpc.NewServer(creds)
 	pb.RegisterJokeServiceServer(s, &server{})
 	

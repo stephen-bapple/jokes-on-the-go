@@ -1,5 +1,6 @@
-package sb.jokesonthego.jokeservice
+package io.github.stephen_bapple.jokesonthegoservice
 
+import io.github.stephen_bapple.jokesonthegoservice.JokeServiceGrpc.getServiceDescriptor
 import io.grpc.CallOptions
 import io.grpc.CallOptions.DEFAULT
 import io.grpc.Channel
@@ -20,7 +21,6 @@ import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 import kotlin.jvm.JvmOverloads
 import kotlin.jvm.JvmStatic
-import sb.jokesonthego.jokeservice.JokeServiceGrpc.getServiceDescriptor
 
 /**
  * Holder for Kotlin coroutine-based client and server APIs for jokeserver.JokeService.

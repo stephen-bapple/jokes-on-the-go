@@ -3,8 +3,9 @@ PREFIX="github.com/stephen-bapple/jokes-on-the-go"
 FOLDER="protobuf"
 SERVICE="joke-service"
 GO_DIR="go"
-KT_DIR="kotlin"
-JAVA_DIR="java"
+KT_ROOT="kotlin"
+KT_DIR="$KT_ROOT/src/main/kotlin"
+JAVA_DIR="$KT_ROOT/src/main/java"
 
 # TODO: this seems fragile as it's specified in the .proto file as well.
 GO_PACKAGE="$PREFIX/$FOLDER/$GO_DIR/$SERVICE"
@@ -14,8 +15,7 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 # Clean directories
 rm -rf $FOLDER/$GO_DIR/*
-rm -rf $FOLDER/$KT_DIR/*
-rm -rf $FOLDER/$JAVA_DIR/*
+rm -rf $FOLDER/$KT_ROOT/*
 mkdir -p $FOLDER/$GO_DIR
 mkdir -p $FOLDER/$KT_DIR
 mkdir -p $FOLDER/$JAVA_DIR

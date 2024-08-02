@@ -3,7 +3,7 @@
 // source: protobuf/jokeserver.proto
 // Protobuf Java Version: 4.27.1
 
-package sb.jokesonthego.jokeservice;
+package io.github.stephen_bapple.jokesonthegoservice;
 
 public final class JokeServerProto {
   private JokeServerProto() {}
@@ -58,10 +58,11 @@ public final class JokeServerProto {
       "t\032$.jokeserver.GetAnyRandomJokeResponse\"" +
       "\000\022d\n\025GetAnyRandomJoke2Test\022#.jokeserver." +
       "GetAnyRandomJokeRequest\032$.jokeserver.Get" +
-      "AnyRandomJokeResponse\"\000Bt\n\033sb.jokesonthe" +
-      "go.jokeserviceB\017JokeServerProtoP\001ZBgithu" +
-      "b.com/stephen-bapple/jokes-on-the-go/pro" +
-      "tobuf/go/joke-serviceb\006proto3"
+      "AnyRandomJokeResponse\"\000B\205\001\n,io.github.st" +
+      "ephen_bapple.jokesonthegoserviceB\017JokeSe" +
+      "rverProtoP\001ZBgithub.com/stephen-bapple/j" +
+      "okes-on-the-go/protobuf/go/joke-serviceb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -4,5 +4,5 @@
 
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
-package sb.jokesonthego.jokeservice;
+package io.github.stephen_bapple.jokesonthegoservice;
 

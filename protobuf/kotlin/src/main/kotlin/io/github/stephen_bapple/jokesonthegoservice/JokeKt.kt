@@ -4,11 +4,11 @@
 
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
-package sb.jokesonthego.jokeservice;
+package io.github.stephen_bapple.jokesonthegoservice;
 
 @kotlin.jvm.JvmName("-initializejoke")
-public inline fun joke(block: sb.jokesonthego.jokeservice.JokeKt.Dsl.() -> kotlin.Unit): sb.jokesonthego.jokeservice.Joke =
-  sb.jokesonthego.jokeservice.JokeKt.Dsl._create(sb.jokesonthego.jokeservice.Joke.newBuilder()).apply { block() }._build()
+public inline fun joke(block: io.github.stephen_bapple.jokesonthegoservice.JokeKt.Dsl.() -> kotlin.Unit): io.github.stephen_bapple.jokesonthegoservice.Joke =
+  io.github.stephen_bapple.jokesonthegoservice.JokeKt.Dsl._create(io.github.stephen_bapple.jokesonthegoservice.Joke.newBuilder()).apply { block() }._build()
 /**
  * Protobuf type `jokeserver.Joke`
  */
@@ -16,17 +16,17 @@ public object JokeKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
   public class Dsl private constructor(
-    private val _builder: sb.jokesonthego.jokeservice.Joke.Builder
+    private val _builder: io.github.stephen_bapple.jokesonthegoservice.Joke.Builder
   ) {
     public companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
-      internal fun _create(builder: sb.jokesonthego.jokeservice.Joke.Builder): Dsl = Dsl(builder)
+      internal fun _create(builder: io.github.stephen_bapple.jokesonthegoservice.Joke.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
     @kotlin.PublishedApi
-    internal fun _build(): sb.jokesonthego.jokeservice.Joke = _builder.build()
+    internal fun _build(): io.github.stephen_bapple.jokesonthegoservice.Joke = _builder.build()
 
     /**
      * `string setup = 1;`
@@ -64,6 +64,6 @@ public object JokeKt {
   }
 }
 @kotlin.jvm.JvmSynthetic
-public inline fun sb.jokesonthego.jokeservice.Joke.copy(block: `sb.jokesonthego.jokeservice`.JokeKt.Dsl.() -> kotlin.Unit): sb.jokesonthego.jokeservice.Joke =
-  `sb.jokesonthego.jokeservice`.JokeKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+public inline fun io.github.stephen_bapple.jokesonthegoservice.Joke.copy(block: `io.github.stephen_bapple.jokesonthegoservice`.JokeKt.Dsl.() -> kotlin.Unit): io.github.stephen_bapple.jokesonthegoservice.Joke =
+  `io.github.stephen_bapple.jokesonthegoservice`.JokeKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 

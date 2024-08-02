@@ -3,7 +3,7 @@
 // source: protobuf/jokeserver.proto
 // Protobuf Java Version: 4.27.1
 
-package sb.jokesonthego.jokeservice;
+package io.github.stephen_bapple.jokesonthegoservice;
 
 /**
  * Protobuf type {@code jokeserver.GetAnyRandomJokeResponse}
@@ -31,20 +31,20 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return sb.jokesonthego.jokeservice.JokeServerProto.internal_static_jokeserver_GetAnyRandomJokeResponse_descriptor;
+    return io.github.stephen_bapple.jokesonthegoservice.JokeServerProto.internal_static_jokeserver_GetAnyRandomJokeResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return sb.jokesonthego.jokeservice.JokeServerProto.internal_static_jokeserver_GetAnyRandomJokeResponse_fieldAccessorTable
+    return io.github.stephen_bapple.jokesonthegoservice.JokeServerProto.internal_static_jokeserver_GetAnyRandomJokeResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse.class, sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse.Builder.class);
+            io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse.class, io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse.Builder.class);
   }
 
   private int bitField0_;
   public static final int JOKE_FIELD_NUMBER = 1;
-  private sb.jokesonthego.jokeservice.Joke joke_;
+  private io.github.stephen_bapple.jokesonthegoservice.Joke joke_;
   /**
    * <code>.jokeserver.Joke joke = 1;</code>
    * @return Whether the joke field is set.
@@ -58,15 +58,15 @@ private static final long serialVersionUID = 0L;
    * @return The joke.
    */
   @java.lang.Override
-  public sb.jokesonthego.jokeservice.Joke getJoke() {
-    return joke_ == null ? sb.jokesonthego.jokeservice.Joke.getDefaultInstance() : joke_;
+  public io.github.stephen_bapple.jokesonthegoservice.Joke getJoke() {
+    return joke_ == null ? io.github.stephen_bapple.jokesonthegoservice.Joke.getDefaultInstance() : joke_;
   }
   /**
    * <code>.jokeserver.Joke joke = 1;</code>
    */
   @java.lang.Override
-  public sb.jokesonthego.jokeservice.JokeOrBuilder getJokeOrBuilder() {
-    return joke_ == null ? sb.jokesonthego.jokeservice.Joke.getDefaultInstance() : joke_;
+  public io.github.stephen_bapple.jokesonthegoservice.JokeOrBuilder getJokeOrBuilder() {
+    return joke_ == null ? io.github.stephen_bapple.jokesonthegoservice.Joke.getDefaultInstance() : joke_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -109,10 +109,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse)) {
+    if (!(obj instanceof io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse)) {
       return super.equals(obj);
     }
-    sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse other = (sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse) obj;
+    io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse other = (io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse) obj;
 
     if (hasJoke() != other.hasJoke()) return false;
     if (hasJoke()) {
@@ -139,44 +139,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseFrom(
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseFrom(
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseFrom(
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseFrom(
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseFrom(byte[] data)
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseFrom(
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseFrom(java.io.InputStream input)
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseFrom(
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -184,26 +184,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseDelimitedFrom(java.io.InputStream input)
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseDelimitedFrom(
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseFrom(
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse parseFrom(
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -216,7 +216,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse prototype) {
+  public static Builder newBuilder(io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -237,21 +237,21 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:jokeserver.GetAnyRandomJokeResponse)
-      sb.jokesonthego.jokeservice.GetAnyRandomJokeResponseOrBuilder {
+      io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return sb.jokesonthego.jokeservice.JokeServerProto.internal_static_jokeserver_GetAnyRandomJokeResponse_descriptor;
+      return io.github.stephen_bapple.jokesonthegoservice.JokeServerProto.internal_static_jokeserver_GetAnyRandomJokeResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return sb.jokesonthego.jokeservice.JokeServerProto.internal_static_jokeserver_GetAnyRandomJokeResponse_fieldAccessorTable
+      return io.github.stephen_bapple.jokesonthegoservice.JokeServerProto.internal_static_jokeserver_GetAnyRandomJokeResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse.class, sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse.Builder.class);
+              io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse.class, io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse.Builder.class);
     }
 
-    // Construct using sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse.newBuilder()
+    // Construct using io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -282,17 +282,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return sb.jokesonthego.jokeservice.JokeServerProto.internal_static_jokeserver_GetAnyRandomJokeResponse_descriptor;
+      return io.github.stephen_bapple.jokesonthegoservice.JokeServerProto.internal_static_jokeserver_GetAnyRandomJokeResponse_descriptor;
     }
 
     @java.lang.Override
-    public sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse getDefaultInstanceForType() {
-      return sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse.getDefaultInstance();
+    public io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse getDefaultInstanceForType() {
+      return io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse build() {
-      sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse result = buildPartial();
+    public io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse build() {
+      io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -300,14 +300,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse buildPartial() {
-      sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse result = new sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse(this);
+    public io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse buildPartial() {
+      io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse result = new io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse result) {
+    private void buildPartial0(io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -321,16 +321,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse) {
-        return mergeFrom((sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse)other);
+      if (other instanceof io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse) {
+        return mergeFrom((io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse other) {
-      if (other == sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse other) {
+      if (other == io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse.getDefaultInstance()) return this;
       if (other.hasJoke()) {
         mergeJoke(other.getJoke());
       }
@@ -384,9 +384,9 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private sb.jokesonthego.jokeservice.Joke joke_;
+    private io.github.stephen_bapple.jokesonthegoservice.Joke joke_;
     private com.google.protobuf.SingleFieldBuilder<
-        sb.jokesonthego.jokeservice.Joke, sb.jokesonthego.jokeservice.Joke.Builder, sb.jokesonthego.jokeservice.JokeOrBuilder> jokeBuilder_;
+        io.github.stephen_bapple.jokesonthegoservice.Joke, io.github.stephen_bapple.jokesonthegoservice.Joke.Builder, io.github.stephen_bapple.jokesonthegoservice.JokeOrBuilder> jokeBuilder_;
     /**
      * <code>.jokeserver.Joke joke = 1;</code>
      * @return Whether the joke field is set.
@@ -398,9 +398,9 @@ private static final long serialVersionUID = 0L;
      * <code>.jokeserver.Joke joke = 1;</code>
      * @return The joke.
      */
-    public sb.jokesonthego.jokeservice.Joke getJoke() {
+    public io.github.stephen_bapple.jokesonthegoservice.Joke getJoke() {
       if (jokeBuilder_ == null) {
-        return joke_ == null ? sb.jokesonthego.jokeservice.Joke.getDefaultInstance() : joke_;
+        return joke_ == null ? io.github.stephen_bapple.jokesonthegoservice.Joke.getDefaultInstance() : joke_;
       } else {
         return jokeBuilder_.getMessage();
       }
@@ -408,7 +408,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.jokeserver.Joke joke = 1;</code>
      */
-    public Builder setJoke(sb.jokesonthego.jokeservice.Joke value) {
+    public Builder setJoke(io.github.stephen_bapple.jokesonthegoservice.Joke value) {
       if (jokeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -425,7 +425,7 @@ private static final long serialVersionUID = 0L;
      * <code>.jokeserver.Joke joke = 1;</code>
      */
     public Builder setJoke(
-        sb.jokesonthego.jokeservice.Joke.Builder builderForValue) {
+        io.github.stephen_bapple.jokesonthegoservice.Joke.Builder builderForValue) {
       if (jokeBuilder_ == null) {
         joke_ = builderForValue.build();
       } else {
@@ -438,11 +438,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.jokeserver.Joke joke = 1;</code>
      */
-    public Builder mergeJoke(sb.jokesonthego.jokeservice.Joke value) {
+    public Builder mergeJoke(io.github.stephen_bapple.jokesonthegoservice.Joke value) {
       if (jokeBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           joke_ != null &&
-          joke_ != sb.jokesonthego.jokeservice.Joke.getDefaultInstance()) {
+          joke_ != io.github.stephen_bapple.jokesonthegoservice.Joke.getDefaultInstance()) {
           getJokeBuilder().mergeFrom(value);
         } else {
           joke_ = value;
@@ -472,7 +472,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.jokeserver.Joke joke = 1;</code>
      */
-    public sb.jokesonthego.jokeservice.Joke.Builder getJokeBuilder() {
+    public io.github.stephen_bapple.jokesonthegoservice.Joke.Builder getJokeBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getJokeFieldBuilder().getBuilder();
@@ -480,23 +480,23 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.jokeserver.Joke joke = 1;</code>
      */
-    public sb.jokesonthego.jokeservice.JokeOrBuilder getJokeOrBuilder() {
+    public io.github.stephen_bapple.jokesonthegoservice.JokeOrBuilder getJokeOrBuilder() {
       if (jokeBuilder_ != null) {
         return jokeBuilder_.getMessageOrBuilder();
       } else {
         return joke_ == null ?
-            sb.jokesonthego.jokeservice.Joke.getDefaultInstance() : joke_;
+            io.github.stephen_bapple.jokesonthegoservice.Joke.getDefaultInstance() : joke_;
       }
     }
     /**
      * <code>.jokeserver.Joke joke = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        sb.jokesonthego.jokeservice.Joke, sb.jokesonthego.jokeservice.Joke.Builder, sb.jokesonthego.jokeservice.JokeOrBuilder> 
+        io.github.stephen_bapple.jokesonthegoservice.Joke, io.github.stephen_bapple.jokesonthegoservice.Joke.Builder, io.github.stephen_bapple.jokesonthegoservice.JokeOrBuilder> 
         getJokeFieldBuilder() {
       if (jokeBuilder_ == null) {
         jokeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            sb.jokesonthego.jokeservice.Joke, sb.jokesonthego.jokeservice.Joke.Builder, sb.jokesonthego.jokeservice.JokeOrBuilder>(
+            io.github.stephen_bapple.jokesonthegoservice.Joke, io.github.stephen_bapple.jokesonthegoservice.Joke.Builder, io.github.stephen_bapple.jokesonthegoservice.JokeOrBuilder>(
                 getJoke(),
                 getParentForChildren(),
                 isClean());
@@ -509,12 +509,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:jokeserver.GetAnyRandomJokeResponse)
-  private static final sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse DEFAULT_INSTANCE;
+  private static final io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse();
+    DEFAULT_INSTANCE = new io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse();
   }
 
-  public static sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse getDefaultInstance() {
+  public static io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -550,7 +550,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public sb.jokesonthego.jokeservice.GetAnyRandomJokeResponse getDefaultInstanceForType() {
+  public io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -12,6 +12,13 @@ plugins {
 
 repositories {
     mavenCentral()
+    maven {
+        url = uri("https://maven.pkg.github.com/stephen-bapple/jokes-on-the-go")
+        credentials {
+            username = project.extra["GITHUB_USERNAME"] as String
+            password = project.extra["GITHUB_TOKEN"] as String
+        }
+    }
 }
 
 dependencies {
@@ -33,6 +40,10 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
     // JWT stuff
     implementation("io.github.cdimascio:dotenv-kotlin:6.3.1")
+
+    // The gRPC stubs
+    implementation("io.github.stephen-bapple:jokeservice-grpc-kotlin:1.0.0-alpha")
+
     // Kotlin test
     testImplementation(kotlin("test"))
 
@@ -51,16 +62,5 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(21))
-    }
-}
-
-sourceSets {
-    main {
-        kotlin {
-            srcDir("../protobuf/kotlin/src/main/kotlin")
-        }
-        java {
-            srcDir("../protobuf/kotlin/src/main/java")
-        }
     }
 }

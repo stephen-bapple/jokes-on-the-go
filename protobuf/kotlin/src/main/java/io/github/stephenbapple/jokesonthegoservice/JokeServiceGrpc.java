@@ -1,4 +1,4 @@
-package io.github.stephen_bapple.jokesonthegoservice;
+package io.github.stephenbapple.jokesonthegoservice;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -15,66 +15,35 @@ public final class JokeServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "jokeserver.JokeService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest,
-      io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> getGetAnyRandomJokeMethod;
+  private static volatile io.grpc.MethodDescriptor<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest,
+      io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> getGetAnyRandomJokeMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetAnyRandomJoke",
-      requestType = io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest.class,
-      responseType = io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse.class,
+      requestType = io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest.class,
+      responseType = io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest,
-      io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> getGetAnyRandomJokeMethod() {
-    io.grpc.MethodDescriptor<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest, io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> getGetAnyRandomJokeMethod;
+  public static io.grpc.MethodDescriptor<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest,
+      io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> getGetAnyRandomJokeMethod() {
+    io.grpc.MethodDescriptor<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest, io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> getGetAnyRandomJokeMethod;
     if ((getGetAnyRandomJokeMethod = JokeServiceGrpc.getGetAnyRandomJokeMethod) == null) {
       synchronized (JokeServiceGrpc.class) {
         if ((getGetAnyRandomJokeMethod = JokeServiceGrpc.getGetAnyRandomJokeMethod) == null) {
           JokeServiceGrpc.getGetAnyRandomJokeMethod = getGetAnyRandomJokeMethod =
-              io.grpc.MethodDescriptor.<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest, io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse>newBuilder()
+              io.grpc.MethodDescriptor.<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest, io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAnyRandomJoke"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest.getDefaultInstance()))
+                  io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse.getDefaultInstance()))
+                  io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse.getDefaultInstance()))
               .setSchemaDescriptor(new JokeServiceMethodDescriptorSupplier("GetAnyRandomJoke"))
               .build();
         }
       }
     }
     return getGetAnyRandomJokeMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest,
-      io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> getGetAnyRandomJoke2TestMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetAnyRandomJoke2Test",
-      requestType = io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest.class,
-      responseType = io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest,
-      io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> getGetAnyRandomJoke2TestMethod() {
-    io.grpc.MethodDescriptor<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest, io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> getGetAnyRandomJoke2TestMethod;
-    if ((getGetAnyRandomJoke2TestMethod = JokeServiceGrpc.getGetAnyRandomJoke2TestMethod) == null) {
-      synchronized (JokeServiceGrpc.class) {
-        if ((getGetAnyRandomJoke2TestMethod = JokeServiceGrpc.getGetAnyRandomJoke2TestMethod) == null) {
-          JokeServiceGrpc.getGetAnyRandomJoke2TestMethod = getGetAnyRandomJoke2TestMethod =
-              io.grpc.MethodDescriptor.<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest, io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAnyRandomJoke2Test"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new JokeServiceMethodDescriptorSupplier("GetAnyRandomJoke2Test"))
-              .build();
-        }
-      }
-    }
-    return getGetAnyRandomJoke2TestMethod;
   }
 
   /**
@@ -127,16 +96,9 @@ public final class JokeServiceGrpc {
 
     /**
      */
-    default void getAnyRandomJoke(io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest request,
-        io.grpc.stub.StreamObserver<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> responseObserver) {
+    default void getAnyRandomJoke(io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest request,
+        io.grpc.stub.StreamObserver<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnyRandomJokeMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void getAnyRandomJoke2Test(io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest request,
-        io.grpc.stub.StreamObserver<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnyRandomJoke2TestMethod(), responseObserver);
     }
   }
 
@@ -169,18 +131,10 @@ public final class JokeServiceGrpc {
 
     /**
      */
-    public void getAnyRandomJoke(io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest request,
-        io.grpc.stub.StreamObserver<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> responseObserver) {
+    public void getAnyRandomJoke(io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest request,
+        io.grpc.stub.StreamObserver<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAnyRandomJokeMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void getAnyRandomJoke2Test(io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest request,
-        io.grpc.stub.StreamObserver<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetAnyRandomJoke2TestMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -202,16 +156,9 @@ public final class JokeServiceGrpc {
 
     /**
      */
-    public io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse getAnyRandomJoke(io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest request) {
+    public io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse getAnyRandomJoke(io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAnyRandomJokeMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse getAnyRandomJoke2Test(io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetAnyRandomJoke2TestMethod(), getCallOptions(), request);
     }
   }
 
@@ -233,23 +180,14 @@ public final class JokeServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> getAnyRandomJoke(
-        io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> getAnyRandomJoke(
+        io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAnyRandomJokeMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse> getAnyRandomJoke2Test(
-        io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetAnyRandomJoke2TestMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_GET_ANY_RANDOM_JOKE = 0;
-  private static final int METHODID_GET_ANY_RANDOM_JOKE2TEST = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -269,12 +207,8 @@ public final class JokeServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_ANY_RANDOM_JOKE:
-          serviceImpl.getAnyRandomJoke((io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest) request,
-              (io.grpc.stub.StreamObserver<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse>) responseObserver);
-          break;
-        case METHODID_GET_ANY_RANDOM_JOKE2TEST:
-          serviceImpl.getAnyRandomJoke2Test((io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest) request,
-              (io.grpc.stub.StreamObserver<io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse>) responseObserver);
+          serviceImpl.getAnyRandomJoke((io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest) request,
+              (io.grpc.stub.StreamObserver<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -298,16 +232,9 @@ public final class JokeServiceGrpc {
           getGetAnyRandomJokeMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest,
-              io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse>(
+              io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest,
+              io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse>(
                 service, METHODID_GET_ANY_RANDOM_JOKE)))
-        .addMethod(
-          getGetAnyRandomJoke2TestMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeRequest,
-              io.github.stephen_bapple.jokesonthegoservice.GetAnyRandomJokeResponse>(
-                service, METHODID_GET_ANY_RANDOM_JOKE2TEST)))
         .build();
   }
 
@@ -317,7 +244,7 @@ public final class JokeServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return io.github.stephen_bapple.jokesonthegoservice.JokeServerProto.getDescriptor();
+      return io.github.stephenbapple.jokesonthegoservice.JokeServerProto.getDescriptor();
     }
 
     @java.lang.Override
@@ -357,7 +284,6 @@ public final class JokeServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new JokeServiceFileDescriptorSupplier())
               .addMethod(getGetAnyRandomJokeMethod())
-              .addMethod(getGetAnyRandomJoke2TestMethod())
               .build();
         }
       }

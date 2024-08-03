@@ -3,7 +3,7 @@
 // source: protobuf/jokeserver.proto
 // Protobuf Java Version: 4.27.1
 
-package io.github.stephen_bapple.jokesonthegoservice;
+package io.github.stephenbapple.jokesonthegoservice;
 
 public final class JokeServerProto {
   private JokeServerProto() {}
@@ -53,16 +53,13 @@ public final class JokeServerProto {
       "\031\n\027GetAnyRandomJokeRequest\":\n\030GetAnyRand" +
       "omJokeResponse\022\036\n\004joke\030\001 \001(\0132\020.jokeserve" +
       "r.Joke\"(\n\004Joke\022\r\n\005setup\030\001 \001(\t\022\021\n\tpunchli" +
-      "ne\030\002 \001(\t2\324\001\n\013JokeService\022_\n\020GetAnyRandom" +
-      "Joke\022#.jokeserver.GetAnyRandomJokeReques" +
-      "t\032$.jokeserver.GetAnyRandomJokeResponse\"" +
-      "\000\022d\n\025GetAnyRandomJoke2Test\022#.jokeserver." +
-      "GetAnyRandomJokeRequest\032$.jokeserver.Get" +
-      "AnyRandomJokeResponse\"\000B\205\001\n,io.github.st" +
-      "ephen_bapple.jokesonthegoserviceB\017JokeSe" +
-      "rverProtoP\001ZBgithub.com/stephen-bapple/j" +
-      "okes-on-the-go/protobuf/go/joke-serviceb" +
-      "\006proto3"
+      "ne\030\002 \001(\t2n\n\013JokeService\022_\n\020GetAnyRandomJ" +
+      "oke\022#.jokeserver.GetAnyRandomJokeRequest" +
+      "\032$.jokeserver.GetAnyRandomJokeResponse\"\000" +
+      "B\204\001\n+io.github.stephenbapple.jokesontheg" +
+      "oserviceB\017JokeServerProtoP\001ZBgithub.com/" +
+      "stephen-bapple/jokes-on-the-go/protobuf/" +
+      "go/joke-serviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

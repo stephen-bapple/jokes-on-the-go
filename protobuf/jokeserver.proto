@@ -10,7 +10,6 @@ package jokeserver;
 
 service JokeService {
     rpc GetAnyRandomJoke(GetAnyRandomJokeRequest) returns (GetAnyRandomJokeResponse) {}
-    rpc GetAnyRandomJoke2Test(GetAnyRandomJokeRequest) returns (GetAnyRandomJokeResponse) {}
 }
 
 message GetAnyRandomJokeRequest {}

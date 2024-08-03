@@ -3,7 +3,7 @@
 // source: protobuf/jokeserver.proto
 // Protobuf Java Version: 4.27.1
 
-package io.github.stephen_bapple.jokesonthegoservice;
+package io.github.stephenbapple.jokesonthegoservice;
 
 public interface GetAnyRandomJokeRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:jokeserver.GetAnyRandomJokeRequest)

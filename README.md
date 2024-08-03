@@ -29,7 +29,7 @@ The script `./protoc-gen-grpc-kotlin.sh` is used as a facade to the .jar file pl
 ### client
 This folder holds temporary test code for developing the server's capabilities. I am planning to replace it with a separate mobile app, perhaps in another repo.
 
-### joke-service
+### protbuf
 This folder holds protobuf definitions and generated stubs.
 
 ### server

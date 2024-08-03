@@ -31,7 +31,10 @@ func validateJwtToken(authorization []string, secret string) bool {
 
 	return err == nil
 }
-func makeValidator(secret string) (func(ctx context.Context, req any, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (any, error)) {
+
+type Interceptor = func(context.Context, any, *grpc.UnaryServerInfo, grpc.UnaryHandler) (any, error)
+
+func makeValidator(secret string) (Interceptor) {
 	return func (ctx context.Context, req any, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (any, error) {
 		meta, ok := metadata.FromIncomingContext(ctx)
 		if !ok {

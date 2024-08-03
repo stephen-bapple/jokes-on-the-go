@@ -1,6 +1,7 @@
 name: Release Kotlin Protobuf stubs
 
 on:
+  workflow_dispatch:
   release:
     types: [published]
 

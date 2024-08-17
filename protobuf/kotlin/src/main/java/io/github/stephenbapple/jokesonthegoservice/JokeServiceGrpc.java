@@ -46,6 +46,37 @@ public final class JokeServiceGrpc {
     return getGetAnyRandomJokeMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest,
+      io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> getTriggerUpdateForPackageTestMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TriggerUpdateForPackageTest",
+      requestType = io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest.class,
+      responseType = io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest,
+      io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> getTriggerUpdateForPackageTestMethod() {
+    io.grpc.MethodDescriptor<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest, io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> getTriggerUpdateForPackageTestMethod;
+    if ((getTriggerUpdateForPackageTestMethod = JokeServiceGrpc.getTriggerUpdateForPackageTestMethod) == null) {
+      synchronized (JokeServiceGrpc.class) {
+        if ((getTriggerUpdateForPackageTestMethod = JokeServiceGrpc.getTriggerUpdateForPackageTestMethod) == null) {
+          JokeServiceGrpc.getTriggerUpdateForPackageTestMethod = getTriggerUpdateForPackageTestMethod =
+              io.grpc.MethodDescriptor.<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest, io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TriggerUpdateForPackageTest"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new JokeServiceMethodDescriptorSupplier("TriggerUpdateForPackageTest"))
+              .build();
+        }
+      }
+    }
+    return getTriggerUpdateForPackageTestMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +131,13 @@ public final class JokeServiceGrpc {
         io.grpc.stub.StreamObserver<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnyRandomJokeMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void triggerUpdateForPackageTest(io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest request,
+        io.grpc.stub.StreamObserver<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTriggerUpdateForPackageTestMethod(), responseObserver);
+    }
   }
 
   /**
@@ -136,6 +174,14 @@ public final class JokeServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAnyRandomJokeMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void triggerUpdateForPackageTest(io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest request,
+        io.grpc.stub.StreamObserver<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTriggerUpdateForPackageTestMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -159,6 +205,13 @@ public final class JokeServiceGrpc {
     public io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse getAnyRandomJoke(io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAnyRandomJokeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse triggerUpdateForPackageTest(io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTriggerUpdateForPackageTestMethod(), getCallOptions(), request);
     }
   }
 
@@ -185,9 +238,18 @@ public final class JokeServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAnyRandomJokeMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse> triggerUpdateForPackageTest(
+        io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTriggerUpdateForPackageTestMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_ANY_RANDOM_JOKE = 0;
+  private static final int METHODID_TRIGGER_UPDATE_FOR_PACKAGE_TEST = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -208,6 +270,10 @@ public final class JokeServiceGrpc {
       switch (methodId) {
         case METHODID_GET_ANY_RANDOM_JOKE:
           serviceImpl.getAnyRandomJoke((io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest) request,
+              (io.grpc.stub.StreamObserver<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse>) responseObserver);
+          break;
+        case METHODID_TRIGGER_UPDATE_FOR_PACKAGE_TEST:
+          serviceImpl.triggerUpdateForPackageTest((io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest) request,
               (io.grpc.stub.StreamObserver<io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse>) responseObserver);
           break;
         default:
@@ -235,6 +301,13 @@ public final class JokeServiceGrpc {
               io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest,
               io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse>(
                 service, METHODID_GET_ANY_RANDOM_JOKE)))
+        .addMethod(
+          getTriggerUpdateForPackageTestMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeRequest,
+              io.github.stephenbapple.jokesonthegoservice.GetAnyRandomJokeResponse>(
+                service, METHODID_TRIGGER_UPDATE_FOR_PACKAGE_TEST)))
         .build();
   }
 
@@ -284,6 +357,7 @@ public final class JokeServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new JokeServiceFileDescriptorSupplier())
               .addMethod(getGetAnyRandomJokeMethod())
+              .addMethod(getTriggerUpdateForPackageTestMethod())
               .build();
         }
       }

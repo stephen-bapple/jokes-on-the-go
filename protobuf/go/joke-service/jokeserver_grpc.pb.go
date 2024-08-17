@@ -23,6 +23,7 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type JokeServiceClient interface {
 	GetAnyRandomJoke(ctx context.Context, in *GetAnyRandomJokeRequest, opts ...grpc.CallOption) (*GetAnyRandomJokeResponse, error)
+	TriggerUpdateForPackageTest(ctx context.Context, in *GetAnyRandomJokeRequest, opts ...grpc.CallOption) (*GetAnyRandomJokeResponse, error)
 }
 
 type jokeServiceClient struct {
@@ -42,11 +43,21 @@ func (c *jokeServiceClient) GetAnyRandomJoke(ctx context.Context, in *GetAnyRand
 	return out, nil
 }
 
+func (c *jokeServiceClient) TriggerUpdateForPackageTest(ctx context.Context, in *GetAnyRandomJokeRequest, opts ...grpc.CallOption) (*GetAnyRandomJokeResponse, error) {
+	out := new(GetAnyRandomJokeResponse)
+	err := c.cc.Invoke(ctx, "/jokeserver.JokeService/TriggerUpdateForPackageTest", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // JokeServiceServer is the server API for JokeService service.
 // All implementations must embed UnimplementedJokeServiceServer
 // for forward compatibility
 type JokeServiceServer interface {
 	GetAnyRandomJoke(context.Context, *GetAnyRandomJokeRequest) (*GetAnyRandomJokeResponse, error)
+	TriggerUpdateForPackageTest(context.Context, *GetAnyRandomJokeRequest) (*GetAnyRandomJokeResponse, error)
 	mustEmbedUnimplementedJokeServiceServer()
 }
 
@@ -56,6 +67,9 @@ type UnimplementedJokeServiceServer struct {
 
 func (UnimplementedJokeServiceServer) GetAnyRandomJoke(context.Context, *GetAnyRandomJokeRequest) (*GetAnyRandomJokeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAnyRandomJoke not implemented")
+}
+func (UnimplementedJokeServiceServer) TriggerUpdateForPackageTest(context.Context, *GetAnyRandomJokeRequest) (*GetAnyRandomJokeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method TriggerUpdateForPackageTest not implemented")
 }
 func (UnimplementedJokeServiceServer) mustEmbedUnimplementedJokeServiceServer() {}
 
@@ -88,6 +102,24 @@ func _JokeService_GetAnyRandomJoke_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _JokeService_TriggerUpdateForPackageTest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAnyRandomJokeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(JokeServiceServer).TriggerUpdateForPackageTest(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/jokeserver.JokeService/TriggerUpdateForPackageTest",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(JokeServiceServer).TriggerUpdateForPackageTest(ctx, req.(*GetAnyRandomJokeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // JokeService_ServiceDesc is the grpc.ServiceDesc for JokeService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -98,6 +130,10 @@ var JokeService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetAnyRandomJoke",
 			Handler:    _JokeService_GetAnyRandomJoke_Handler,
+		},
+		{
+			MethodName: "TriggerUpdateForPackageTest",
+			Handler:    _JokeService_TriggerUpdateForPackageTest_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

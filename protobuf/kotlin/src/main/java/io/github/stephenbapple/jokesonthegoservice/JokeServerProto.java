@@ -53,13 +53,16 @@ public final class JokeServerProto {
       "\031\n\027GetAnyRandomJokeRequest\":\n\030GetAnyRand" +
       "omJokeResponse\022\036\n\004joke\030\001 \001(\0132\020.jokeserve" +
       "r.Joke\"(\n\004Joke\022\r\n\005setup\030\001 \001(\t\022\021\n\tpunchli" +
-      "ne\030\002 \001(\t2n\n\013JokeService\022_\n\020GetAnyRandomJ" +
-      "oke\022#.jokeserver.GetAnyRandomJokeRequest" +
-      "\032$.jokeserver.GetAnyRandomJokeResponse\"\000" +
-      "B\204\001\n+io.github.stephenbapple.jokesontheg" +
-      "oserviceB\017JokeServerProtoP\001ZBgithub.com/" +
-      "stephen-bapple/jokes-on-the-go/protobuf/" +
-      "go/joke-serviceb\006proto3"
+      "ne\030\002 \001(\t2\332\001\n\013JokeService\022_\n\020GetAnyRandom" +
+      "Joke\022#.jokeserver.GetAnyRandomJokeReques" +
+      "t\032$.jokeserver.GetAnyRandomJokeResponse\"" +
+      "\000\022j\n\033TriggerUpdateForPackageTest\022#.jokes" +
+      "erver.GetAnyRandomJokeRequest\032$.jokeserv" +
+      "er.GetAnyRandomJokeResponse\"\000B\204\001\n+io.git" +
+      "hub.stephenbapple.jokesonthegoserviceB\017J" +
+      "okeServerProtoP\001ZBgithub.com/stephen-bap" +
+      "ple/jokes-on-the-go/protobuf/go/joke-ser" +
+      "viceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

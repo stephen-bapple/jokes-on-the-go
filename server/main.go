@@ -6,6 +6,7 @@ import (
 	"log"
 	"net"
 	"os"
+	"math/rand"
 	pb "github.com/stephen-bapple/jokes-on-the-go/protobuf/go/joke-service"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
@@ -21,14 +22,20 @@ type server struct {
 }
 
 func (s *server) GetAnyRandomJoke(ctx context.Context, in *pb.GetAnyRandomJokeRequest) (*pb.GetAnyRandomJokeResponse, error) {
-	harcodedJoke := pb.Joke{
-		Setup: "Why do seagulls live by the sea?",
-		// Say it out loud :)
-		Punchline: "Because if they lived by the bay, they'd be bay-gulls.",
+	var hardCodedJokes = []pb.Joke{
+		{
+			Setup: "Why do seagulls live by the sea?",
+			Punchline: "Because if they lived by the bay, they'd be bay-gulls.",
+		},
+		{
+			Setup: "Why couldn't the bicycle stand up straight?",
+			Punchline: "It was two-tired",
+		},
 	}
+	harcodedJoke := &hardCodedJokes[rand.Intn(2)]
 
 	return &pb.GetAnyRandomJokeResponse{
-		Joke: &harcodedJoke,
+		Joke: harcodedJoke,
 	}, nil
 }
 

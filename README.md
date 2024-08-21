@@ -1,4 +1,4 @@
-# jokes-on-the-go
+# Jokes on the Go - Server
 Golang gRPC server for tracking all my dad jokes
 
 This repository holds a small Golang server to implement the server-side stubs, a protobuf folder holding generated stubs, and a Kotlin client purely for testing the Kotlin stubs.
@@ -22,7 +22,7 @@ The following must be manually installed:
 4. Protoc gRPC plugin for Kotlin (1.4.1)
 5. Protoc gRPC plugin for Java  (1.65.1)
 
-Instructions for 1-3 can found here: https://grpc.io/docs/languages/go/quickstart/
+Instructions for 1-3 can found here: https://grpc.io/docs/languages/go/quickstart/  
 For 4, see https://github.com/grpc/grpc-kotlin/blob/master/compiler/README.md#manual-protoc-usage and download the .jar file. The script `protoc-gen-grpc-kotlin.sh` expects the file to have the name `protoc-gen-grpc-kotlin-1.4.1-jdk8.jar`.  
 For 5, see https://github.com/grpc/grpc-java/blob/master/README.md#download  
 However, I found it easier to just download an ELF from https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/, although something like SDKMAN! is probably a better choice. Note that this executable must be named `protoc-gen-grpc-java` as the protoc compiler expects it.

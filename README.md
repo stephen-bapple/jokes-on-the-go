@@ -3,15 +3,16 @@ Golang gRPC server for tracking all my dad jokes
 
 This repository holds a small Golang server to implement the server-side stubs, a protobuf folder holding generated stubs, and a Kotlin client purely for testing the Kotlin stubs.
 
-Because the generated stubs are in both Java (required by Kotlin gRPC library) and Kotlin the repo's line count shows it as a Java/Kotlin repo despite the handwritten code being mostly Go and a smaller amount of Kotlin.
+Because the generated stubs are in both Kotlin and Java (required by Kotlin gRPC library) the Github shows it as a Java/Kotlin repo despite the handwritten code being mostly Go and a smaller amount of Kotlin.
 
-## Stubs
-This repository publishes protobuf stubs for Kotlin clients whenever a release is generated.
-This feature leverages Github Actions to build the package and Github Packages to store it, making it available to any client (or server) that wishes to download them.
+## Protobuf Releases
+This repository publishes protobuf stubs for Kotlin clients whenever a release is generated in Github.
 
-Although the server uses the stubs directly through a Golang-specific local package trick, it could potentially install the stubs too, although currently Golang stubs are not published.
+This feature leverages Github Actions to build the package and Github Packages to store it, making it available to any client (or server) that wishes to use the stubs.
 
-## Dependencies
+Although the server uses the stubs directly through a Golang-specific local package trick, it could potentially install the stubs too. Although currently Golang stubs are not published, they could be.
+
+## Platform Dependencies
 The server uses Go modules and the protobuf stubs and test client use Gradle, but there are some prerequisites that need to be installed in order to generate protobuf stubs.
 
 The following must be manually installed:
@@ -34,13 +35,3 @@ Run `./generate_proto.sh` to generate both the Go protobuf stubs and the Kotlin 
 
 ### protoc-gen-grpc-kotlin.sh
 The script `./protoc-gen-grpc-kotlin.sh` is used as a facade to the .jar file plugin for kotlin code stub generation. The protoc compiler expects a direct executable, requiring wrapping the jar.
-
-## Directory
-### client
-This folder holds temporary test code for developing the server's capabilities. I am planning to replace it with a separate mobile app, perhaps in another repo.
-
-### protbuf
-This folder holds protobuf definitions and generated stubs.
-
-### server
-This folder holds the Go code for the gRPC server.

@@ -2,12 +2,12 @@ module github.com/stephen-bapple/jokes-on-the-go/server
 
 go 1.22.5
 
-require google.golang.org/grpc v1.65.0
-
 require (
-	github.com/stephen-bapple/jokes-on-the-go/protobuf/go/joke-service v0.0.0 // indirect
-	google.golang.org/protobuf v1.34.2 // indirect
+	github.com/stephen-bapple/jokes-on-the-go/protobuf/go/joke-service v0.0.0
+	google.golang.org/grpc v1.65.0
 )
+
+require google.golang.org/protobuf v1.34.2 // indirect
 
 require (
 	github.com/golang-jwt/jwt/v5 v5.2.1

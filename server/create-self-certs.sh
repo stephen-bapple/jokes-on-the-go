@@ -15,7 +15,7 @@ openssl req -x509 -newkey rsa:4096 -days 365 -nodes -keyout ./certs/ca-key.pem -
 openssl req -newkey rsa:4096 -nodes -keyout ./certs/server-key.pem -out ./certs/server-req.pem -subj "$SERVER_SUBJ"
 
 # Use the CA to sign the server's cert
-openssl x509 -req -in ./certs/server-req.pem -days 30 -CA ./certs/ca-cert.pem -CAkey ./certs/ca-key.pem -CAcreateserial -out ./certs/server-cert.pem -extfile server-ext.cnf
+openssl x509 -req -in ./certs/server-req.pem -days 365 -CA ./certs/ca-cert.pem -CAkey ./certs/ca-key.pem -CAcreateserial -out ./certs/server-cert.pem -extfile server-ext.cnf
 
 # Verify
 openssl verify -CAfile ./certs/ca-cert.pem ./certs/server-cert.pem

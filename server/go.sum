@@ -2,8 +2,6 @@ github.com/golang-jwt/jwt/v5 v5.2.1 h1:OuVbFODueb089Lh128TAcimifWaLhJwVflnrgM17w
 github.com/golang-jwt/jwt/v5 v5.2.1/go.mod h1:pqrtFR0X4osieyHYxtmOUWsAWrfe1Q5UVIyoH402zdk=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
-github.com/stephen-bapple/jokes-on-the-go/protobuf/go/joke-service v0.0.0-20240731205844-921c7e7950c2 h1:P0+CkefgwQIl/gYuXe2sFI2FAivp4HGLaDrpaAcxw0s=
-github.com/stephen-bapple/jokes-on-the-go/protobuf/go/joke-service v0.0.0-20240731205844-921c7e7950c2/go.mod h1:fa7GJQO6lrKJTyxXUYSOvRof/YGAkLqUWIbTNXlXU7o=
 golang.org/x/net v0.25.0 h1:d/OCCoBEUq33pjydKrGQhw7IlUPI2Oylr+8qLx49kac=
 golang.org/x/net v0.25.0/go.mod h1:JkAGAh7GEvH74S6FOH42FLoXpXbE/aqXSrIQjXgsiwM=
 golang.org/x/sys v0.20.0 h1:Od9JTbYCk261bKm4M/mw7AklTlFYIa0bIp9BgSm1S8Y=

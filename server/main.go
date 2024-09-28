@@ -39,16 +39,24 @@ func (s *server) GetAnyRandomJoke(ctx context.Context, in *pb.GetAnyRandomJokeRe
 	}, nil
 }
 
-func main() {
-	jwtSecret := os.Getenv("JWT_SECRET")
-	if jwtSecret == "" {
-		log.Fatalf("Cannot start server with JWT_SECRET present in environment")
+func loadEnvOrAbort(varName string) string {
+	envValue := os.Getenv(varName)
+	if envValue == "" {
+		log.Fatalf("Cannot start server without %s present in environment", varName)
 	}
+	return envValue
+}
 
-	tlsCredentials, err := credentials.NewServerTLSFromFile("certs/server-cert.pem", "certs/server-key.pem")
+func main() {
+	jwtSecret := loadEnvOrAbort("JWT_SECRET")
+	certFile := loadEnvOrAbort("CERT_FILE")
+	keyFile := loadEnvOrAbort("KEY_FILE")
+
+	tlsCredentials, err := credentials.NewServerTLSFromFile(certFile, keyFile)
 	if err != nil {
 		log.Fatalf("failed to load key pair: %s", err)
 	}
+
 	opts := []grpc.ServerOption{
 		grpc.UnaryInterceptor(makeValidator(jwtSecret)),
 		grpc.Creds(tlsCredentials),

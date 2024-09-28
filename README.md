@@ -33,5 +33,8 @@ I've included the versions for the separate compilers, but everything else is li
 ### generate_proto.sh
 Run `./generate_proto.sh` to generate both the Go protobuf stubs and the Kotlin protobuf stubs.
 
+### create-self-certs.sh
+Used for local development to create a self signed cert chain only valid for a local network. What certificate and key are loaded is configured by setting the appropriate variables in a .env file, as specified by env.template.
+
 ### protoc-gen-grpc-kotlin.sh
 The script `./protoc-gen-grpc-kotlin.sh` is used as a facade to the .jar file plugin for kotlin code stub generation. The protoc compiler expects a direct executable, requiring wrapping the jar.

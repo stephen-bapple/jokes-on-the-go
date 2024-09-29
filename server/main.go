@@ -54,7 +54,7 @@ func main() {
 
 	tlsCredentials, err := credentials.NewServerTLSFromFile(certFile, keyFile)
 	if err != nil {
-		log.Fatalf("failed to load key pair: %s", err)
+		log.Fatalf("Failed to load key pair: %s", err)
 	}
 
 	opts := []grpc.ServerOption{
@@ -67,10 +67,10 @@ func main() {
 	
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", port))
 	if err != nil {
-		log.Fatalf("failed to listen: %v", err)
+		log.Fatalf("Failed to listen: %v", err)
 	}
-	log.Printf("server listening at %v", lis.Addr())
+	log.Printf("Server listening at %v", lis.Addr())
 	if err := s.Serve(lis); err != nil {
-		log.Fatalf("failed to serve: %v", err)
+		log.Fatalf("Failed to serve: %v", err)
 	}
 }

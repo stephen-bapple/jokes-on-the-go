@@ -29,7 +29,7 @@ func (s *server) GetAnyRandomJoke(ctx context.Context, in *pb.GetAnyRandomJokeRe
 		},
 		{
 			Setup: "Why couldn't the bicycle stand up straight?",
-			Punchline: "It was two-tired",
+			Punchline: "It was two-tired.",
 		},
 		{
 			Setup: "I once submited 10 puns to a content to see which would win.",
@@ -37,7 +37,7 @@ func (s *server) GetAnyRandomJoke(ctx context.Context, in *pb.GetAnyRandomJokeRe
 		},
 		{
 			Setup: "Which month has 28 days?",
-			Punchline: "All of them do",
+			Punchline: "All of them do.",
 		},
 	}
 	harcodedJoke := &hardCodedJokes[rand.Intn(4)]

@@ -31,8 +31,12 @@ func (s *server) GetAnyRandomJoke(ctx context.Context, in *pb.GetAnyRandomJokeRe
 			Setup: "Why couldn't the bicycle stand up straight?",
 			Punchline: "It was two-tired",
 		},
+		{
+			Setup: "I once submited 10 puns to a content to see which would win.",
+			Punchline: "But no pun in-ten-did",
+		},
 	}
-	harcodedJoke := &hardCodedJokes[rand.Intn(2)]
+	harcodedJoke := &hardCodedJokes[rand.Intn(3)]
 
 	return &pb.GetAnyRandomJokeResponse{
 		Joke: harcodedJoke,

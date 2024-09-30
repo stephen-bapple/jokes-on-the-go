@@ -36,7 +36,7 @@ func (s *server) GetAnyRandomJoke(ctx context.Context, in *pb.GetAnyRandomJokeRe
 			Punchline: "But no pun in-ten-did",
 		},
 		{
-			Setup: "What month has 28 days?",
+			Setup: "Which month has 28 days?",
 			Punchline: "All of them do",
 		},
 	}
